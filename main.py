@@ -1,10 +1,10 @@
 import requests,json
 from bs4 import BeautifulSoup
 
-latitude = ""
-longitude = ""
-
-url=f"https://weathernews.jp/onebox/{latitude}/{longitude}/lang=ja"
+latitude = "35.681236"
+longitude = "139.767125"
+lang = "ja"
+url=f"https://weathernews.jp/onebox/{latitude}/{longitude}/lang={lang}"
 response = requests.get(url)
 html = response.text
 soup = BeautifulSoup(html, "html.parser")
